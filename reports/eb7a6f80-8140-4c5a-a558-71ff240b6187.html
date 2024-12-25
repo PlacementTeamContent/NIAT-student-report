@@ -9,21 +9,21 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-        :root{
+        :root {
             --dark-red: #FF5733;
             --dark-yellow: #FFC300;
             --dark-green: #28A745;
 
-            --light-red: #FFC9B2;
-            --light-yellow: #FFF2A8;
-            --light-green: #8FE6A8;
+            --light-red: #fdd9ca;
+            --light-yellow: #fff8ce;
+            --light-green: #d1ffde;
 
             --primary-color: #2565ED;
             --primary-variant: #f6faff;
             --border-color: #CBD5E1;
         }
 
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
@@ -50,12 +50,24 @@
             color: var(--primary-color);
         }
 
-        ol{
+        ol {
             list-style-position: inside;
         }
 
-        li{
+        li {
             line-height: 1.6;
+        }
+
+        .text-red {
+            color: var(--dark-red);
+        }
+
+        .text-yellow {
+            color: var(--dark-yellow);
+        }
+
+        .text-green {
+            color: var(--dark-green);
         }
 
         .container {
@@ -128,7 +140,7 @@
             background-color: var(--dark-yellow);
             border-radius: 10px 0 0 10px;
         }
-        
+
         .progress-green::-webkit-progress-bar {
             background-color: var(--light-green);
             border-radius: 10px;
@@ -197,8 +209,27 @@
         }
 
         @media screen and (max-width:600px) {
+
+            body {
+                padding-top: 5vh;
+                padding-left: 5vw;
+                padding-right: 5vw;
+            }
+
             .item {
                 grid-template-columns: auto;
+            }
+
+            .progress-bar {
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            .circular-progress-container {
+                margin: 0px;
+                row-gap: 10px;
             }
         }
     </style>
@@ -217,7 +248,7 @@
                     <div style="width: 100%;">
                         <p style="margin-bottom: 5px;"><b>Aptitude</b></p>
                         <p style="margin-bottom: 10px;">Marks Obtained: <b>14/45</b></p>
-                        <p style="margin: 0;"><span>% Achieved: </span> <span style="color: var(--primary-color);"><b>31.11%</b></span></p>
+                        <p style="margin: 0;"><span>% Achieved: </span> <span <span id="aptitude-percentage"><b>31.11%</b></span></p>
                         <progress value="31.11" max="100"></progress>
                     </div>
                 </div>
@@ -228,7 +259,7 @@
                     <div style="width: 100%;">
                         <p style="margin-bottom: 5px;"><b>Web Development</b></p>
                         <p style="margin-bottom: 10px;">Marks Obtained: <b>29/30</b></p>
-                        <p style="margin: 0;"><span>% Achieved: </span> <span style="color: var(--primary-color);"><b>96.67%</b></span></p>
+                        <p style="margin: 0;"><span>% Achieved: </span> <span id="web-devlopment-percentage"><b>96.67%</b></span></p>
                         <progress value="96.67" max="100"></progress>
                     </div>
                 </div>
@@ -239,8 +270,7 @@
                     <div style="width: 100%;">
                         <p style="margin-bottom: 5px;"><b>Python Programming</b></p>
                         <p style="margin-bottom: 10px;">Marks Obtained: <b>29/30</b></p>
-                        <p style="margin: 0;"><span>% Achieved: </span> <span
-                                style="color: var(--primary-color);"><b>96.67%</b></span></p>
+                        <p style="margin: 0;"><span>% Achieved: </span> <span id="python-programming-percentage"><b>96.67%</b></span></p>
                         <progress value="96.67" max="100"></progress>
                     </div>
                 </div>
@@ -252,7 +282,8 @@
         <div class="block-heading">Front End Assignment</div>
         <div style="width: 100%;">
             <p style="margin-bottom: 10px;">Score: <b>94/100 </b></p>
-            <p style="margin: 0;"><span>Submission URL: </span> <span><a href="https://nekmit21.niat.tech" target="_blank"><b>nekmit21.niat.tech</b></a></span></p>
+            <p style="margin: 0;"><span>Submission URL: </span> <span><a href="https://nekmit21.niat.tech"
+                        target="_blank"><b>nekmit21.niat.tech</b></a></span></p>
         </div>
     </section>
 
@@ -322,27 +353,27 @@
             <div class="block-sub-heading">Web Development</div>
             <ol>
                 
-                    <li>How does responsiveness work in web design?</li>
+                <li>How does responsiveness work in web design?</li>
                 
-                    <li>Can you explain how the Bootstrap grid system handles responsiveness?</li>
+                <li>Can you explain how the Bootstrap grid system handles responsiveness?</li>
                 
-                    <li>Why is the Bootstrap grid system divided into 12 columns and not, for example, 14 or 16?</li>
+                <li>Why is the Bootstrap grid system divided into 12 columns and not, for example, 14 or 16?</li>
                 
-                    <li>What is padding in CSS?</li>
+                <li>What is padding in CSS?</li>
                 
-                    <li>What is the difference between padding and margin in CSS?</li>
+                <li>What is the difference between padding and margin in CSS?</li>
                 
-                    <li>On a scale from 1 to 10, how do you rate your HTML skills? Why?</li>
+                <li>On a scale from 1 to 10, how do you rate your HTML skills? Why?</li>
                 
-                    <li>What are the different ways to center a button element in HTML/CSS?</li>
+                <li>What are the different ways to center a button element in HTML/CSS?</li>
                 
-                    <li>If a div element has no text and is styled with a background color, will the background color still be applied? Explain why or why not.</li>
+                <li>If a div element has no text and is styled with a background color, will the background color still be applied? Explain why or why not.</li>
                 
-                    <li>What is a viewport in web development?</li>
+                <li>What is a viewport in web development?</li>
                 
-                    <li>How do you create hyperlinks in HTML? What are the key attributes of an anchor (&lt;a&gt;) tag?</li>
+                <li>How do you create hyperlinks in HTML? What are the key attributes of an anchor (&lt;a&gt;) tag?</li>
                 
-                    <li>If tasked with building a website, what key principles would you follow to create an effective web layout?</li>
+                <li>If tasked with building a website, what key principles would you follow to create an effective web layout?</li>
                 
             </ol>
         </div>
@@ -351,13 +382,13 @@
             <div class="block-sub-heading">Python Programming</div>
             <ol>
                 
-                    <li>What is the difference between if-elif-else and nested if statements? When would you use each?</li>
+                <li>What is the difference between if-elif-else and nested if statements? When would you use each?</li>
                 
-                    <li>What are the three main approaches to solve logical problems?</li>
+                <li>What are the three main approaches to solve logical problems?</li>
                 
-                    <li>What are the common steps you follow to debug a Python program?</li>
+                <li>What are the common steps you follow to debug a Python program?</li>
                 
-                    <li>Write a Python program to check whether a given number is less than, greater than, or equal to 5.</li>
+                <li>Write a Python program to check whether a given number is less than, greater than, or equal to 5.</li>
                 
             </ol>
         </div>
@@ -381,16 +412,32 @@
                     return 'progress-green';
                 }
             }
-            console.log(progressBars.length)
-            progressBars.forEach((progressBar) => {
+
+            function getTextColorClass(percentage) {
+                if (percentage < 50) {
+                    return 'text-red';
+                } else if (percentage < 75) {
+                    return 'text-yellow';
+                } else {
+                    return 'text-green';
+                }
+            }
+
+            const aptitudePercentage = document.getElementById('aptitude-percentage');
+            const webDevlopmentPercentage = document.getElementById('web-devlopment-percentage');
+            const pythonProgrammingPercentage = document.getElementById('python-programming-percentage');
+
+            const percentage_texts = [aptitudePercentage, webDevlopmentPercentage, pythonProgrammingPercentage]
+
+            for (let i = 0; i < progressBars.length; i++) {
+                const progressBar = progressBars[i];
                 const percentage = parseInt(progressBar.getAttribute('value'), 10);
-
                 const colorClass = getColorClass(percentage);
-
                 progressBar.classList.add(colorClass);
-            });
+                percentage_texts[i].classList.add(getTextColorClass(percentage))
+            }
 
-            function updateRoundProgressFor(id){
+            function updateRoundProgressFor(id) {
 
                 const progressDiv = document.getElementById(id);
                 if (!progressDiv) {

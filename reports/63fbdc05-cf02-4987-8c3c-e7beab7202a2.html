@@ -9,21 +9,21 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-        :root{
+        :root {
             --dark-red: #FF5733;
             --dark-yellow: #FFC300;
             --dark-green: #28A745;
 
-            --light-red: #FFC9B2;
-            --light-yellow: #FFF2A8;
-            --light-green: #8FE6A8;
+            --light-red: #fdd9ca;
+            --light-yellow: #fff8ce;
+            --light-green: #d1ffde;
 
             --primary-color: #2565ED;
             --primary-variant: #f6faff;
             --border-color: #CBD5E1;
         }
 
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
@@ -50,12 +50,24 @@
             color: var(--primary-color);
         }
 
-        ol{
+        ol {
             list-style-position: inside;
         }
 
-        li{
+        li {
             line-height: 1.6;
+        }
+
+        .text-red {
+            color: var(--dark-red);
+        }
+
+        .text-yellow {
+            color: var(--dark-yellow);
+        }
+
+        .text-green {
+            color: var(--dark-green);
         }
 
         .container {
@@ -128,7 +140,7 @@
             background-color: var(--dark-yellow);
             border-radius: 10px 0 0 10px;
         }
-        
+
         .progress-green::-webkit-progress-bar {
             background-color: var(--light-green);
             border-radius: 10px;
@@ -197,8 +209,27 @@
         }
 
         @media screen and (max-width:600px) {
+
+            body {
+                padding-top: 5vh;
+                padding-left: 5vw;
+                padding-right: 5vw;
+            }
+
             .item {
                 grid-template-columns: auto;
+            }
+
+            .progress-bar {
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+                padding: 5px;
+            }
+
+            .circular-progress-container {
+                margin: 0px;
+                row-gap: 10px;
             }
         }
     </style>
@@ -217,7 +248,7 @@
                     <div style="width: 100%;">
                         <p style="margin-bottom: 5px;"><b>Aptitude</b></p>
                         <p style="margin-bottom: 10px;">Marks Obtained: <b>43/45</b></p>
-                        <p style="margin: 0;"><span>% Achieved: </span> <span style="color: var(--primary-color);"><b>95.56%</b></span></p>
+                        <p style="margin: 0;"><span>% Achieved: </span> <span <span id="aptitude-percentage"><b>95.56%</b></span></p>
                         <progress value="95.56" max="100"></progress>
                     </div>
                 </div>
@@ -228,7 +259,7 @@
                     <div style="width: 100%;">
                         <p style="margin-bottom: 5px;"><b>Web Development</b></p>
                         <p style="margin-bottom: 10px;">Marks Obtained: <b>25/30</b></p>
-                        <p style="margin: 0;"><span>% Achieved: </span> <span style="color: var(--primary-color);"><b>83.33%</b></span></p>
+                        <p style="margin: 0;"><span>% Achieved: </span> <span id="web-devlopment-percentage"><b>83.33%</b></span></p>
                         <progress value="83.33" max="100"></progress>
                     </div>
                 </div>
@@ -239,8 +270,7 @@
                     <div style="width: 100%;">
                         <p style="margin-bottom: 5px;"><b>Python Programming</b></p>
                         <p style="margin-bottom: 10px;">Marks Obtained: <b>28/30</b></p>
-                        <p style="margin: 0;"><span>% Achieved: </span> <span
-                                style="color: var(--primary-color);"><b>93.33%</b></span></p>
+                        <p style="margin: 0;"><span>% Achieved: </span> <span id="python-programming-percentage"><b>93.33%</b></span></p>
                         <progress value="93.33" max="100"></progress>
                     </div>
                 </div>
@@ -252,7 +282,8 @@
         <div class="block-heading">Front End Assignment</div>
         <div style="width: 100%;">
             <p style="margin-bottom: 10px;">Score: <b>98/100 </b></p>
-            <p style="margin: 0;"><span>Submission URL: </span> <span><a href="https://internshipdec.niat.tech" target="_blank"><b>internshipdec.niat.tech</b></a></span></p>
+            <p style="margin: 0;"><span>Submission URL: </span> <span><a href="https://internshipdec.niat.tech"
+                        target="_blank"><b>internshipdec.niat.tech</b></a></span></p>
         </div>
     </section>
 
@@ -322,33 +353,33 @@
             <div class="block-sub-heading">Web Development</div>
             <ol>
                 
-                    <li>How do you arrange elements on a webpage? Can you explain the technical process?</li>
+                <li>How do you arrange elements on a webpage? Can you explain the technical process?</li>
                 
-                    <li>What is the specific Bootstrap component used for implementing a slider?</li>
+                <li>What is the specific Bootstrap component used for implementing a slider?</li>
                 
-                    <li>Why did you use Bootstrap version 4.x instead of the latest 5.x?</li>
+                <li>Why did you use Bootstrap version 4.x instead of the latest 5.x?</li>
                 
-                    <li>What are the key implementations you have done using Bootstrap?</li>
+                <li>What are the key implementations you have done using Bootstrap?</li>
                 
-                    <li>How do you use maps in web development? Can you explain the process, for example, using an iframe?</li>
+                <li>How do you use maps in web development? Can you explain the process, for example, using an iframe?</li>
                 
-                    <li>Could you explain in detail how the Bootstrap grid system works?</li>
+                <li>Could you explain in detail how the Bootstrap grid system works?</li>
                 
-                    <li>What do you understand about the concept of a viewport in web development?</li>
+                <li>What do you understand about the concept of a viewport in web development?</li>
                 
-                    <li>What is an anchor tag, and what attributes does it have?</li>
+                <li>What is an anchor tag, and what attributes does it have?</li>
                 
-                    <li>How would you align a paragraph tag to the center of the page, both horizontally and vertically?</li>
+                <li>How would you align a paragraph tag to the center of the page, both horizontally and vertically?</li>
                 
-                    <li>What are the different types of Bootstrap components you have worked with?</li>
+                <li>What are the different types of Bootstrap components you have worked with?</li>
                 
-                    <li>What is a carousel in Bootstrap, and when would you use it?</li>
+                <li>What is a carousel in Bootstrap, and when would you use it?</li>
                 
-                    <li>What are the different types of lists in HTML, and how are they used?</li>
+                <li>What are the different types of lists in HTML, and how are they used?</li>
                 
-                    <li>Is Bootstrap responsive by default, or do you need to take additional steps?</li>
+                <li>Is Bootstrap responsive by default, or do you need to take additional steps?</li>
                 
-                    <li>How do you create a grid layout in Bootstrap? What classes do you use, and how do you specify layouts for different screen sizes?</li>
+                <li>How do you create a grid layout in Bootstrap? What classes do you use, and how do you specify layouts for different screen sizes?</li>
                 
             </ol>
         </div>
@@ -357,27 +388,27 @@
             <div class="block-sub-heading">Python Programming</div>
             <ol>
                 
-                    <li>What are the key features of Python?</li>
+                <li>What are the key features of Python?</li>
                 
-                    <li>In which technologies or applications is Python commonly used? Can you provide real-world examples?</li>
+                <li>In which technologies or applications is Python commonly used? Can you provide real-world examples?</li>
                 
-                    <li>What do you understand about type conversion in Python?</li>
+                <li>What do you understand about type conversion in Python?</li>
                 
-                    <li>What is the major difference between a for loop and a while loop?</li>
+                <li>What is the major difference between a for loop and a while loop?</li>
                 
-                    <li>How can you use a for loop when you don’t know the range in advance?</li>
+                <li>How can you use a for loop when you don’t know the range in advance?</li>
                 
-                    <li>What are the different types of methods you have used in Python so far?</li>
+                <li>What are the different types of methods you have used in Python so far?</li>
                 
-                    <li>How do you add elements to a list in Python?</li>
+                <li>How do you add elements to a list in Python?</li>
                 
-                    <li>How do you delete elements from a list? Start with deleting the last element, and then explain how to delete a specific element.</li>
+                <li>How do you delete elements from a list? Start with deleting the last element, and then explain how to delete a specific element.</li>
                 
-                    <li>What is the difference between break, continue, and pass in Python?</li>
+                <li>What is the difference between break, continue, and pass in Python?</li>
                 
-                    <li>How can you update an element in a list in Python?</li>
+                <li>How can you update an element in a list in Python?</li>
                 
-                    <li>Write a Python program to find the maximum and minimum numbers in a list without using any inbuilt methods.</li>
+                <li>Write a Python program to find the maximum and minimum numbers in a list without using any inbuilt methods.</li>
                 
             </ol>
         </div>
@@ -401,16 +432,32 @@
                     return 'progress-green';
                 }
             }
-            console.log(progressBars.length)
-            progressBars.forEach((progressBar) => {
+
+            function getTextColorClass(percentage) {
+                if (percentage < 50) {
+                    return 'text-red';
+                } else if (percentage < 75) {
+                    return 'text-yellow';
+                } else {
+                    return 'text-green';
+                }
+            }
+
+            const aptitudePercentage = document.getElementById('aptitude-percentage');
+            const webDevlopmentPercentage = document.getElementById('web-devlopment-percentage');
+            const pythonProgrammingPercentage = document.getElementById('python-programming-percentage');
+
+            const percentage_texts = [aptitudePercentage, webDevlopmentPercentage, pythonProgrammingPercentage]
+
+            for (let i = 0; i < progressBars.length; i++) {
+                const progressBar = progressBars[i];
                 const percentage = parseInt(progressBar.getAttribute('value'), 10);
-
                 const colorClass = getColorClass(percentage);
-
                 progressBar.classList.add(colorClass);
-            });
+                percentage_texts[i].classList.add(getTextColorClass(percentage))
+            }
 
-            function updateRoundProgressFor(id){
+            function updateRoundProgressFor(id) {
 
                 const progressDiv = document.getElementById(id);
                 if (!progressDiv) {
