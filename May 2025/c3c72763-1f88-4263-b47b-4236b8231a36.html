@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        :root{
+            --dark-yellow:#FFC300;
+            --dark-green:#28A745;
+            --light-yellow:#fff8ce;
+            --light-green:#d1ffde;
+
+            --primary-color:#2565ED;
+            --primary-variant:#f6faff;
+            --border-color:#CBD5E1;
+        }
+        *{margin:0;padding:0}
+        body{margin:0;padding:2vw 10vw 0;font-family:"Roboto",sans-serif;color:black;background-color:var(--primary-variant)}
+        p{margin:0;padding:0; line-height: 1.5;}
+        a{text-decoration:none;cursor:pointer;color:var(--primary-color)}
+        ol{list-style-position:inside}
+        li{line-height:1.6}
+        .hide{display:none}
+        .text-yellow{color:var(--dark-yellow)}
+        .container{border:1px solid var(--border-color)!important;border-radius:20px;width:auto;height:fit-content;padding:30px;margin-top:10px;background-color:white}
+        .sub-container{background-color:var(--primary-variant)!important}
+        .item{display:grid;flex-wrap:wrap;justify-items:stretch;flex-direction:column;grid-template-columns:auto auto;column-gap:10px}
+        .row{display:flex;align-items:stretch;flex-direction:row;justify-content:space-between;margin-bottom:10px;gap:10px}
+        .left{flex:1;display:flex;align-items:center;border:1px solid var(--border-color)!important;border-radius:10px;padding:20px}
+        
+        progress{width:100%;height:7px;border:none;border-radius:10px;-webkit-appearance:none;appearance:none;}
+        progress::-webkit-progress-bar{background-color:var(--light-yellow);border-radius:10px}
+        progress::-webkit-progress-value{background-color:var(--dark-yellow);border-radius:10px 0 0 10px}
+        
+        .progress-bar{margin:0 10px;width:100px;height:100px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+        .progress-bar p{text-align:center;font-weight:bold; font-size: 1.2rem;}
+        .progress-bar-container{display:flex;margin:0 20px 10px;flex-direction:column;justify-content:center;align-items:center;width:fit-content;flex:1 0 25%}
+        .circular-progress-container{margin:50px;display:flex;flex-wrap:wrap;flex-direction:row;row-gap:20px; justify-content: center;}
+        .block-heading{font-weight:bold;font-size:large;margin-bottom:20px;letter-spacing:1px}
+        .block-sub-heading{font-weight:bold;margin-bottom:20px}
+        .center{width:100%;display:flex;text-align:center;justify-content:center;margin-top:5px}
+
+        @media screen and (max-width:600px){
+            body{padding:5vh 5vw}
+            .item{grid-template-columns:auto}
+            .progress-bar{width:80px;height:80px;margin:5px;padding:5px}
+            .circular-progress-container{margin:0;row-gap:10px}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: black; margin-bottom:20px;">Sai Koushik</h1>
+    </header>
+
+    <section class="container">
+        <div class="block-heading">Assessment</div>
+        <div class="item">
+            <div class="row">
+                <div class="left">
+                    <div style="width: 100%;">
+                        <p style="margin-bottom: 5px;"><b>Web Development MCQ's</b></p>
+                        <p style="margin-bottom: 10px;">Marks Obtained: <b>18/30</b></p>
+                        <p style="margin: 0;">% Achieved: <span id="web-dev-mcq-percentage"><b>60%</b></span></p>
+                        <progress value="60" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <div style="width: 100%;">
+                        <p style="margin-bottom: 5px;"><b>Python MCQ's</b></p>
+                        <p style="margin-bottom: 10px;">Marks Obtained: <b>21/30</b></p>
+                        <p style="margin: 0;">% Achieved: <span id="python-mcq-percentage"><b>70%</b></span></p>
+                        <progress value="70" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <div style="width: 100%;">
+                        <p style="margin-bottom: 5px;"><b>Python Coding</b></p>
+                        <p style="margin-bottom: 10px;">Marks Obtained: <b>170/250</b></p>
+                        <p style="margin: 0;">% Achieved: <span id="python-coding-percentage"><b>68.00%</b></span></p>
+                        <progress value="68.00" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="block-heading">Web Development Coding - Responsive</div>
+        <p style="margin-bottom: 10px;">Score: <b>20/100</b></p>
+        <p>Submission URL: <span><a href="https://placementteamcontent.github.io/Frontend-Submissions/May&#39;25/30th/HTML,CSS/c3c72763-1f88-4263-b47b-4236b8231a36" target="_blank"><b>https://placementteamcontent.github.io/Frontend-Submissions/May&#39;25/30th/HTML,CSS/c3c72763-1f88-4263-b47b-4236b8231a36</b></a></span></p>
+    </section>
+
+    <section class="container">
+        <div class="block-heading">Web Development Coding - Dynamic</div>
+        <p style="margin-bottom: 10px;">Score: <b>12/20</b></p>
+        <p>Submission URL: <span><a href="https://placementteamcontent.github.io/Project-Deployment/May 2025/c3c72763-1f88-4263-b47b-4236b8231a36" target="_blank"><b>https://placementteamcontent.github.io/Project-Deployment/May 2025/c3c72763-1f88-4263-b47b-4236b8231a36</b></a></span></p>
+    </section>
+
+    <section class="container">
+        <div class="block-heading">Domain Expert Interview</div>
+        <div class="circular-progress-container">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="cpb-1"><p>80%</p></div>
+                <div class="center">Self Introduction</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="cpb-2"><p>60%</p></div>
+                <div class="center">Responsive Project</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="cpb-3"><p>80%</p></div>
+                <div class="center">Dynamic Project</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="cpb-4"><p>60%</p></div>
+                <div class="center">Communication</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="cpb-5"><p>60%</p></div>
+                <div class="center">Technical Theory</div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="cpb-6"><p>80%</p></div>
+                <div class="center">Python Coding</div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="height: 50px;"></footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const percentage_texts = document.querySelectorAll('.item .left span[id$="-percentage"]');
+            percentage_texts.forEach(span => {
+                span.classList.add('text-yellow');
+            });
+
+            // --- MODIFIED: Using direct hex codes for colors to ensure compatibility ---
+            function getGradientColor(percentage) {
+                if (percentage < 75) {
+                    return '#FFC300'; // Yellow
+                } else {
+                    return '#28A745';  // Green
+                }
+            }
+            
+            // --- MODIFIED: Using direct hex codes for colors to ensure compatibility ---
+            function getLightGradientColor(percentage) {
+                if (percentage < 75) {
+                    return '#fff8ce'; // Light Yellow
+                } else {
+                    return '#d1ffde'; // Light Green
+                }
+            }
+            
+            function updateRoundProgressFor(id) {
+                const progressDiv = document.getElementById(id);
+                if (!progressDiv) return;
+
+                const progressP = progressDiv.querySelector('p');
+                if (!progressP) return;
+                
+                const text = progressP.textContent || progressP.innerText;
+                const percentageMatch = text.match(/(\d+)%/);
+                if (!percentageMatch) return;
+                
+                let percentage = parseInt(percentageMatch[1], 10);
+                percentage = Math.max(0, Math.min(percentage, 100));
+                
+                const gradientColor = getGradientColor(percentage);
+                const lightGradientColor = getLightGradientColor(percentage);
+
+                progressDiv.style.background = `
+                    radial-gradient(closest-side, white 69%, transparent 70% 100%),
+                    conic-gradient(${gradientColor} ${percentage}%, ${lightGradientColor} 0)
+                `;
+            }
+
+            for (let i = 1; i <= 6; i++) {
+                updateRoundProgressFor(`cpb-${i}`);
+            }
+        });
+    </script>
+</body>
+</html>
